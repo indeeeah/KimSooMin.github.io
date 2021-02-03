@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>김수민의 포트폴리오</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://kit.fontawesome.com/2409d81413.js" crossorigin="anonymous"></script>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_19U315Kgy9Cijr2JVKGsu');
+            $('input[name=submit]').click(function() {
+                // console.log($('input[name=from_name]').val());
+                // console.log($('input[name=to_name]').val());
+                // console.log($('input[name=reply_to]').val());
+                // console.log($('input[name=message]').val());
+
+                var templateParams = {
+                    //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+                    from_name: $('input[name=from_name]').val(),
+                    to_name: $('input[name=to_name]').val(),
+                    reply_to: $('input[name=reply_to]').val(),
+                    message: $('textarea[name=message]').val()
+                };
+
+
+                emailjs.send('service_g6emxlm', 'template_mtkpxxs', templateParams)
+                    //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+                    .then(function(response) {
+                        alert('이메일이 성공적으로 보내졌습니다!', response.status, response.text);
+                    }, function(error) {
+                        alert('FAILED...', error);
+                    });
+
+
+
+            });
+        });
+    </script>
+    <!-- <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_g6emxlm', 'template_mtkpxxs', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script> -->
+</head>
+
+<body class="is-preload">
+
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#intro">Welcome</a></li>
+                    <li><a href="#one">project</a></li>
+                    <li><a href="#two">link</a></li>
+                    <li><a href="#three">Get in touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Intro -->
+        <section id="intro" class="wrapper style1 fullscreen fade-up">
+            <div class="inner">
+                <h1>김수민의 포트폴리오</h1>
+                <p>제가 가진 능력과 노력으로 더욱 성장하여 앞으로 제가 나아가야 할 길을 보다 힘차게,<br> 보다 도전적으로 걸어나가고 싶습니다.</p>
+                <br>
+                <p><i class="fas fa-circle-notch"></i>&nbsp;&nbsp;&nbsp; 2020.08 - 2021.01 KH정보교육원 디지털 컨버전스 융합응용 SW개발자 양성과정
+                    <br>
+                    <i class="fas fa-circle-notch"></i>&nbsp;&nbsp;&nbsp; 2020.03 - 2021.02 건국대학교 미래지식교육원 의상디자인학 4년 학사 졸업
+                    <br>
+                    <i class="fas fa-circle-notch"></i>&nbsp;&nbsp;&nbsp; 2015.03 - 2018.02 한양여자대학교 니트패션디자인학 전문 학사 졸업
+                    <br>
+                </p>
+                <p>Skills - Java, Spring, Mybatis, jsp, Servlet, jdbc, Oracle, Ajax, jQuery, JavaScript, HTML, CSS, PL/SQL, Git</p>
+                <ul class="actions">
+                    <li><a href="#one" class="button scrolly">Learn more</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- One -->
+        <section id="one" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/KakaoTalk_Photo_2021-02-03-14-31-19.jpeg" alt="" data-position="center center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>TA_IN Project</h2>
+                        <p>타인과 일상을 소통하다.
+                            <br> 코로나19 팬데믹은 우리의 삶을 전적으로 변화시켰습니다. 직접적인 만남이 제한되고, 우리 생활의 많은 영역이 디지털로 전환되었습니다.
+                            <br> 이에 우리는 개인과 개인 간의 소통뿐만 아니라 기존 인스타그램에는 없던 개인과 기업, 개인과 브랜드 간의 연결과 소통을 보다 쉽게 열 수 있도록 “타인” 프로젝트를 기획하게 되었습니다.
+                        </p>
+                        <ul class="actions">
+                            <li><a href="https://github.com/indeeeah/-Project_TA_IN-1" class="button">Learn more</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <a href="#" class="image"><img src="images/KakaoTalk_Photo_2021-02-03-14-31-16.jpeg" alt="" data-position="top center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Jelly Music Project</h2>
+                        <p>'알고리즘의 선택'이라는 말이 생길 만큼 이제는 알고리즘이 단순한 추천을 넘어서 숨어있던 컨텐츠들을 유명하게 만드는 역할까지 하고 있습니다.
+                            <br> 음악 추천 사이트에서 시작한 아이디어는 음악 플레이 뿐만 아니라 음원, 앨범, 아티스트 정보 제공과 사용자들끼리의 소통을 위한 댓글 기능도 추가하였습니다.
+                            <br> 또한 사이트 운영을 위한 관리자 페이지도 만들어 회원 관리와 음원 관리를 할 수 있게 했습니다.
+                        </p>
+                        <ul class="actions">
+                            <li><a href="https://github.com/indeeeah/Jelly-Music" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- <section>
+                <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>Ultricies aliquam</h2>
+                        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
+                        <ul class="actions">
+                            <li><a href="generic.html" class="button">Learn more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section> -->
+        </section>
+
+        <!-- Two -->
+        <section id="two" class="wrapper style3 fade-up">
+            <div class="inner">
+                <h2>Link</h2>
+                <div class="features">
+                    <section>
+                        <span class="icon solid major fa-code"></span>
+                        <h3>GitHub</h3>
+                        <p>배우고 공부한 것, 그리고 개인, 협업 프로젝트를 올리는 제 공간입니다.</p>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="https://github.com/indeeeah" class="button">Learn more</a>
+                    </section>
+                    <section>
+                        <span class="icon major fa-gem"></span>
+                        <h3>Blog - 하기나 해</h3>
+                        <p>주로 오류 코드 리뷰를 올립니다.<br>공부한 것을 단단한 나의 지식으로 만들기 위해 리뷰하는 공간입니다.<br>추후 개념 정리와 개발에 관련된 이슈 또는 저의 생각들로 꾸준히 업데이트 할 예정입니다.</p>
+                        <a href="https://indeeah.tistory.com" class="button">Learn more</a>
+                        <br>
+                        <br>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Three -->
+        <section id="three" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Get in touch</h2>
+                <div class="split style1">
+                    <section>
+                        <form id="contact-form">
+                            <div class="fields">
+                                <div class="field half">
+                                    <!-- <input type="hidden" name="contact_number"> -->
+                                    <label for="name">Name</label>
+                                    <input type="text" name="from_name" id="name" />
+                                    <input type="hidden" name="to_name" value="김수민">
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="reply_to" id="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" name="message" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <input type="button" name="submit" class="button submit" value="Send Message"></li>
+                        </form>
+                    </section>
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Address</h3>
+                                <span>경기도 의왕시, 대한민국</span>
+                            </li>
+                            <li>
+                                <h3>Email</h3>
+                                <a href="mailto: indeeeah@gmail.com">indeeeah@gmail.com</a>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <span>010-9032-8185</span>
+                            </li>
+                            <li>
+                                <h3>Social</h3>
+                                <ul class="icons">
+                                    <li><a href="https://github.com/indeeeah" class="icon brands fa-github"><span
+                                                class="label">GitHub</span></a>
+                                    </li>
+                                    <li><a href="https://www.instagram.com/deeahin/" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>Copyright &copy; 2021 Kim Soo Min</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
